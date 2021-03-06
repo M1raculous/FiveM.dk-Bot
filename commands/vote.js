@@ -31,7 +31,7 @@ module.exports = {
 						// console.log(result);
 						if (typeof result !== "undefined") {
 							if (typeof result[0] !== "undefined") {
-								message.channel.send("Du har allerede stemt i dag.")
+								message.channel.send("Du har allerede stemt i dag. **Husk** du kan stemme 2 gange om dagen på vores hjemmeside: https/fivem.dk")
 							}
 							else {
 								var sql = "INSERT INTO votes (identifier, server, curdate) VALUES ('"+identifier+"', '"+server+"', CURDATE())";
