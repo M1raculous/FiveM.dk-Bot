@@ -22,7 +22,8 @@ module.exports = {
 				if (server) {
 					console.table(response['data'])
 					if (typeof response['data']['result6'][0] === "undefined") {
-						message.channel.send("Du har ikke defineret en server, ellers findes denne server ikke på vores liste. Tjek listen på https://fivem.dk")
+						message.channel.send("
+								     'ikke defineret en server, ellers findes denne server ikke på vores liste. Tjek listen på https://fivem.dk")
 						return;
 					}
 
@@ -31,7 +32,7 @@ module.exports = {
 						// console.log(result);
 						if (typeof result !== "undefined") {
 							if (typeof result[0] !== "undefined") {
-								message.channel.send("Du har allerede stemt i dag.")
+								message.channel.send("Du har allerede stemt i dag. **Husk**, at du kan stemme 2 gange om dagen på vores hjemmeside: https://fivem.dk")
 							}
 							else {
 								var sql = "INSERT INTO votes (identifier, server, curdate) VALUES ('"+identifier+"', '"+server+"', CURDATE())";
